@@ -7,15 +7,13 @@ import os
 import logging
 from datetime import datetime
 import tempfile
-# import matplotlib.pyplot as plt # Chart.jsを使うので不要
-# import matplotlib.font_manager as fm # フォント設定削除のため不要
 import streamlit.components.v1 as components
-import json # HTMLにデータを埋め込むため追加
+import json 
 
 # ロギング設定
 logging.basicConfig(level=logging.WARNING, format='%(levelname)s: %(message)s')
 
-# --- Sパラメータ処理関数 (DataFrameのみ返す) ---
+# --- Sパラメータ処理関数 ---
 def process_s2p_files(uploaded_files, param_to_extract='S21', display_mode='対数振幅 (dB)'):
     param_indices = {
         'S11': (0, 0), 'S12': (0, 1), 'S21': (1, 0), 'S22': (1, 1)
@@ -152,7 +150,7 @@ st.divider()
 # --- 解析実行と結果表示 ---
 if run_button and uploaded_files:
     st.info(f"解析を開始します...")
-    # process_s2p_files 関数を呼び出す (関数名は必要に応じて変更 v9->process_s2p_files)
+    # process_s2p_files 関数を呼び出す
     df_result = process_s2p_files(uploaded_files, selected_param, selected_display_mode)
 
     if df_result is not None:
