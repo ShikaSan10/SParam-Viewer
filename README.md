@@ -1,6 +1,5 @@
 # S-Parameter Web Analyzer
 
-(ここにアプリのスクリーンショットやGIFアニメーションを挿入すると、より分かりやすくなります)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A web-based tool built with Streamlit and Scikit-RF to analyze and visualize S-parameter (.s2p) files. Upload multiple Touchstone files, select a specific S-parameter (e.g., S21), view the frequency response plot (dB vs. Frequency), and download the combined data in an Excel file.
